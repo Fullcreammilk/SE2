@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import Login_bl_servlmpl.LoginBlServlmpl;
 import PO.UserPO;
+import login_bl_servlmpl.LoginBlServlmpl;
 
 public class LoginTest {
 	private String id, password;
