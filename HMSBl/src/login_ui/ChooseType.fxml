@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="155.0" prefWidth="446.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="155.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_ui.ChooseTypeController">
    <children>
       <Button layoutX="82.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="120.0" text="普通会员" />
       <Button layoutX="245.0" layoutY="64.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="120.0" text="企业会员" />

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_ui.LoginController">
    <children>
       <Button layoutX="193.0" layoutY="313.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="300.0" text="登录">
          <font>
@@ -29,7 +29,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="527.0" layoutY="219.0" prefHeight="27.0" prefWidth="80.0" text="注册新账号">
+      <Hyperlink fx:id="signUp" layoutX="527.0" layoutY="219.0" onAction="#register" prefHeight="27.0" prefWidth="80.0" text="注册新账号">
          <font>
             <Font size="14.0" />
          </font>
