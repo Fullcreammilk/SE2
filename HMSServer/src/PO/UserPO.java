@@ -2,16 +2,28 @@ package PO;
 
 import java.util.ArrayList;
 
+enum vipType{person,company};
+
 public class UserPO {
-	private String id;
+	private String id,name,contactInof,specialInfo;
+	private int creditTol,vipLev;
 	private String password;
-	private ArrayList<String> hotelList;
+	private ArrayList<OrderPO> orders;
+	private ArrayList<CreditPO> credits;
+	private vipType type;
 	
-	public UserPO(String id,String password){
+	public UserPO(String id,String password,String contactInfo,String name,String specialInfo,
+			int creditTol,int vipLev,vipType type){
 		super();
 		this.id=id;
 		this.password=password;
-		hotelList=new ArrayList<String>();
+		this.contactInof=contactInfo;
+		this.name=name;
+		this.creditTol=creditTol;
+		this.vipLev=vipLev;
+		this.type=type;
+		this.specialInfo=specialInfo;
+		//to be continue...
 	}
 	
 	public String getID(){
@@ -26,7 +38,51 @@ public class UserPO {
 		return password;
 	}
 	
-	public void addHote(String name){
-		hotelList.add(name);
+	public void setContactInfo(String s){
+		this.contactInof=s;
+	}
+	
+	public String getContactInfo(){
+		return this.contactInof;
+	}
+	
+	public void setName(String s){
+		this.name=s;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
+	
+	public void setCreditTol(int i){
+		this.creditTol=i;
+	}
+	
+	public int getCreditTol(){
+		return this.creditTol;
+	}
+	
+	public void setVipLev(int i){
+		this.vipLev=i;
+	}
+	
+	public int getVipLev(){
+		return this.vipLev;
+	}
+	
+	public vipType getType(){
+		return this.type;
+	}
+	
+	public String getSpecialInfo(){
+		return this.specialInfo;
+	}
+	
+	public ArrayList<OrderPO> getOrder(){
+		return this.orders;
+	}
+	
+	public ArrayList<CreditPO> getCredit(){
+		return this.credits;
 	}
 }

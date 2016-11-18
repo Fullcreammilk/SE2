@@ -1,0 +1,53 @@
+package PO;
+
+import java.util.ArrayList;
+
+public class HotelPO {
+	private String name,businesscircle,introduce,address;
+	private double stars;
+	private ArrayList<String> comment,companies;
+	private ArrayList<RoomPO> rooms;
+	private ArrayList<HotelStrategyPO> strategy;
+	
+	public HotelPO(String name,String bc,String intro,String address,double stars){
+		super();
+		this.name=name;
+		this.businesscircle=bc;
+		this.introduce=intro;
+		this.address=address;
+		this.stars=stars;
+		//to be continue...
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setName(String name){
+		this.name=name;
+	}
+	
+	public String getBC(){
+		return businesscircle;
+	}
+	
+	public void setBC(String bc){
+		this.businesscircle=bc;
+	}
+	
+	public String getINTRO(){
+		return introduce;
+	}
+	
+	public void setINTRO(String intro){
+		this.introduce=intro;
+	}
+	
+	public ArrayList getComment(){
+		return comment;
+	}
+	
+	public void setComment(ArrayList c){
+		this.comment=c;
+	}
+}

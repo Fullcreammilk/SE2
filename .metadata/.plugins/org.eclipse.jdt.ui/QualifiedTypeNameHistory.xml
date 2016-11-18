@@ -32,7 +32,6 @@
 <fullyQualifiedTypeName name="credit_bl_servlpml.CreditBlServlmpl"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="PO.CreditPO"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="PO.HotelPO"/>
 <fullyQualifiedTypeName name="HMSDate.CreditDataServ"/>
 <fullyQualifiedTypeName name="HMSDate.HotalDataServ"/>
@@ -48,4 +47,5 @@
 <fullyQualifiedTypeName name="HMSBl.LoginBlServlmpl"/>
 <fullyQualifiedTypeName name="HMSBl.HotelBlServlmpl"/>
 <fullyQualifiedTypeName name="HMSBl.CreditBlServlmpl"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
