@@ -26,13 +26,10 @@
 <fullyQualifiedTypeName name="DataService.hotelStrategyDataImpl"/>
 <fullyQualifiedTypeName name="DataService.memberStrategyDataImpl"/>
 <fullyQualifiedTypeName name="user_data_serv.UserDataServ"/>
-<fullyQualifiedTypeName name="PO.UserPO"/>
 <fullyQualifiedTypeName name="Login_bl_servlmpl.LoginBlServlmpl"/>
 <fullyQualifiedTypeName name="hotel_bl_servlmpl.HotelBlServlmpl"/>
 <fullyQualifiedTypeName name="credit_bl_servlpml.CreditBlServlmpl"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
-<fullyQualifiedTypeName name="PO.CreditPO"/>
-<fullyQualifiedTypeName name="PO.HotelPO"/>
 <fullyQualifiedTypeName name="HMSDate.CreditDataServ"/>
 <fullyQualifiedTypeName name="HMSDate.HotalDataServ"/>
 <fullyQualifiedTypeName name="HMSDate.OrderDataServ"/>
@@ -47,5 +44,8 @@
 <fullyQualifiedTypeName name="HMSBl.LoginBlServlmpl"/>
 <fullyQualifiedTypeName name="HMSBl.HotelBlServlmpl"/>
 <fullyQualifiedTypeName name="HMSBl.CreditBlServlmpl"/>
+<fullyQualifiedTypeName name="PO.UserPO"/>
+<fullyQualifiedTypeName name="PO.CreditPO"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="PO.HotelPO"/>
 </qualifiedTypeNameHistroy>

@@ -1,13 +1,13 @@
 package PO;
 
-enum behavior{DONE,INNORMAL,REVOKE,RECHARGE}
+
 
 public class CreditPO {
 	private String id,time,userid;
 	private double totel,change;
-	private behavior bh;
+	private String bh;
 	
-	public CreditPO(String id,String time,String userid,double totel,double change,behavior bh){
+	public CreditPO(String id,String time,String userid,double totel,double change,String bh){
 		super();
 		this.id=id;
 		this.userid=userid;
@@ -34,7 +34,7 @@ public class CreditPO {
 		return this.change;
 	}
 	
-	public behavior getBehavior(){
+	public String getBehavior(){
 		return this.bh;
 	}
 	

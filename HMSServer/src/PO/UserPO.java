@@ -2,7 +2,6 @@ package PO;
 
 import java.util.ArrayList;
 
-enum vipType{person,company};
 
 public class UserPO {
 	private String id,name,contactInof,specialInfo;
@@ -10,10 +9,10 @@ public class UserPO {
 	private String password;
 	private ArrayList<OrderPO> orders;
 	private ArrayList<CreditPO> credits;
-	private vipType type;
+	private String type;
 	
 	public UserPO(String id,String password,String contactInfo,String name,String specialInfo,
-			int creditTol,int vipLev,vipType type){
+			int creditTol,int vipLev,String type){
 		super();
 		this.id=id;
 		this.password=password;
@@ -25,6 +24,7 @@ public class UserPO {
 		this.specialInfo=specialInfo;
 		//to be continue...
 	}
+	
 	
 	public String getID(){
 		return id;
@@ -70,7 +70,7 @@ public class UserPO {
 		return this.vipLev;
 	}
 	
-	public vipType getType(){
+	public String getType(){
 		return this.type;
 	}
 	
