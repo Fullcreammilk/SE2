@@ -3,14 +3,14 @@ package PO;
 import java.util.ArrayList;
 
 public class OrderPO {
-	private String id,userid,username,usercontact,hotel,intime,outtime,lasttime;
+	private String id,userid,username,usercontact,hotel,intime,outtime,ordertime,lasttime;
 	private ArrayList<String> room;
 	private ArrayList<Integer> num,price,subtotel;
 	private double totel;
 	private String type;
 	
 	public OrderPO(String id,String userid,String hotel,String username,
-			String usercontact,String t,String outtime,String lasttime){
+			String usercontact,String t,String outtime,String ordertime){
 		super();
 		this.id=id;
 		this.username=username;
@@ -18,8 +18,8 @@ public class OrderPO {
 		this.usercontact=usercontact;
 		this.userid=userid;
 		this.type=t;
+		this.ordertime=ordertime;
 		this.outtime=outtime;
-		this.lasttime=lasttime;
 	}
 	
 	public String getID(){
@@ -83,14 +83,6 @@ public class OrderPO {
 	}
 	
 	public void setOutTime(String t){
-		this.outtime=t;
-	}
-	
-	public void setLastTime(String t){
-		this.lasttime=t;
-	}
-	
-	public String getLastTime(){
-		return this.lasttime ;
+		this.outtime
 	}
 }

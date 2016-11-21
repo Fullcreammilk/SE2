@@ -2,10 +2,10 @@ package PO;
 public class HotelStrategyPO {
 	private String hotelname,strategyname,specialInfo;
 	double discount;
-	String type;
+	HotelStrategyType type;
 	
 	public HotelStrategyPO(String hotelname,String strategyname,String specialInfo,double discount,
-			String t){
+			HotelStrategyType t){
 		this.hotelname=hotelname;
 		this.strategyname=strategyname;
 		this.specialInfo=specialInfo;
@@ -29,7 +29,7 @@ public class HotelStrategyPO {
 		return this.discount;
 	}
 	
-	public String getType(){
+	public HotelStrategyType getType(){
 		return this.type;
 	}
 }

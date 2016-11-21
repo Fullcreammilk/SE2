@@ -1,12 +1,13 @@
 package PO;
+enum WebStrategyType{DATE,LEVEL,BUSINESSCIRCLE}
 
 public class WebStrategyPO {
 	String strategyname,businesscircle,date;
 	double lev0,lev1,discount;//type为level的时候，lev0指的是会员升级所需信用，type为businesscircle时，lev0指的是当前该商圈该会员等级的折扣，会员分为低中高三级，第三级会员的折扣存储在discount里，最后type为date的时候，lev为缺省，discount记录这个日期的折扣，注释看不懂就问我
-	String type;
+	WebStrategyType type;
 	
 	public WebStrategyPO(String sn,String bn,String date,double lev0,double lev1,double discount,
-			String t){
+			WebStrategyType t){
 		this.strategyname=sn;
 		this.businesscircle=bn;
 		this.lev0=lev0;
@@ -40,7 +41,7 @@ public class WebStrategyPO {
 		return this.discount;
 	}
 	
-	public String getType(){
+	public WebStrategyType getType(){
 		return this.type;
 	}
 }
