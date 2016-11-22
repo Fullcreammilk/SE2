@@ -56,7 +56,7 @@ public class HotelPO {
 	}
 	
 	public double getStars(){
-		return this.getStars();
+		return this.stars;
 	}
 	
 	public ArrayList<String> getComment(){

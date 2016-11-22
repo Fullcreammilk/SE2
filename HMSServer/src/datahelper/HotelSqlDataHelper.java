@@ -51,6 +51,37 @@ public class HotelSqlDataHelper {
 	}
 	
 	public int insert(HotelPO h){
-		
+		Connection conn=getConn();
+		int i=0;
+		PreparedStatement pstmt;
+		String sql="insert into hotel (name,businesscircle,introduce,address,stars) values("+
+		"'"+h.getName()+"','"+h.getBC()+"','"+h.getINTRO()+"','"+h.getAddress()+"',"+h.getStars()+")";
+		 try {
+		        pstmt = (PreparedStatement) conn.prepareStatement(sql);
+		        i = pstmt.executeUpdate();
+		        pstmt.close();
+		        conn.close();
+		    } catch (SQLException e) {
+		        e.printStackTrace();
+		    }
+		    return i;
+	}
+	
+	public int update(HotelPO h){
+		Connection conn=getConn();
+		int i=0;
+		PreparedStatement pstmt;
+		String sql="update hotel set businesscircle='" + h.getBC() +
+				"', introduce='"+h.getINTRO()+"', address='"+h.getAddress()+
+				"',stars="+h.getStars()+"where id='" + h.getName() + "'";
+		try {
+	        pstmt = (PreparedStatement) conn.prepareStatement(sql);
+	        i = pstmt.executeUpdate();
+	        pstmt.close();
+	        conn.close();
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return i;
 	}
 }

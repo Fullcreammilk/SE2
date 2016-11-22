@@ -51,7 +51,7 @@ public class CompaniesSqlDataHelper {
 		Connection conn=getConn();
 		int i=0;
 		PreparedStatement pstmt;
-		String sql="insert into comment (hotelname,detials) values ("+"'"+c.getHotelName()+"','"+c.getCompanies()+"')";
+		String sql="insert into companies (hotelname,companies) values ("+"'"+c.getHotelName()+"','"+c.getCompanies()+"')";
 		 try {
 		        pstmt = (PreparedStatement) conn.prepareStatement(sql);
 		        i = pstmt.executeUpdate();
