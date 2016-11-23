@@ -5,10 +5,11 @@ import java.rmi.server.UnicastRemoteObject;
 
 import PO.CreditPO;
 import PO.HotelPO;
+import PO.HotelStrategyPO;
 import PO.OrderPO;
 import PO.RoomPO;
-import PO.StrategyPO;
 import PO.UserPO;
+import PO.WebStrategyPO;
 import credit_data_serv.CreditDataServ;
 import hotel_data_serv.HotalDataServ;
 import order_data_serv.OrderDataServ;
@@ -16,13 +17,13 @@ import order_data_serv.abnormalOrderDataServ;
 import order_data_serv.normalOrderDataServ;
 import order_data_serv.revokOrderDataServ;
 import room_data_serv.RoomDataServ;
-import strategy_data_serv.hotelStrategyDataImpl;
-import strategy_data_serv.memberStrategyDataImpl;
+import strategy_data_serv.HotelStrategyDataServ;
+import strategy_data_serv.WebStrategyDataServ;
 import user_data_serv.UserDataServ;
 
 public class DataRemoteObject extends UnicastRemoteObject implements
 	CreditDataServ,HotalDataServ,OrderDataServ,normalOrderDataServ,abnormalOrderDataServ,
-	revokOrderDataServ,RoomDataServ,hotelStrategyDataImpl,memberStrategyDataImpl,UserDataServ{
+	revokOrderDataServ,RoomDataServ,HotelStrategyDataServ,WebStrategyDataServ,UserDataServ{
 
 	protected DataRemoteObject() throws RemoteException {
 		super();
@@ -60,25 +61,49 @@ public class DataRemoteObject extends UnicastRemoteObject implements
 	}
 
 	@Override
-	public void insertStrategy(StrategyPO strategyPO) throws RemoteException {
+	public void insertWebStrategy(WebStrategyPO strategyPO) throws RemoteException {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public StrategyPO[] getStrategyList() throws RemoteException {
+	public WebStrategyPO[] getWebStrategyList() throws RemoteException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteStrategy(String id) throws RemoteException {
+	public void deleteWebStrategy(String id) throws RemoteException {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void modifiedStrategy(StrategyPO strategy) throws RemoteException {
+	public void modifiedWebStrategy(WebStrategyPO strategy) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insertHotelStrategy(HotelStrategyPO strategyPO) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public HotelStrategyPO[] getHotelStrategyList() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteHotelStrategy(String id) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifiedHotelStrategy(HotelStrategyPO strategy) throws RemoteException {
 		// TODO Auto-generated method stub
 		
 	}
@@ -208,5 +233,8 @@ public class DataRemoteObject extends UnicastRemoteObject implements
 		// TODO Auto-generated method stub
 		
 	}
+
+	
+		
 	
 }

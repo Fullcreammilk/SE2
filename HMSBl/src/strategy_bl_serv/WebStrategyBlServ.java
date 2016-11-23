@@ -1,10 +1,10 @@
 package strategy_bl_serv;
 
-import PO.StrategyPO;
+import PO.WebStrategyPO;
 
 public interface WebStrategyBlServ {
-	public StrategyPO[] getStrategy(String hotelName);
-	public boolean addStrategy(StrategyPO strategy);
-	public boolean modifyStrategy(StrategyPO strategy);
-	public boolean delStrategy(StrategyPO strategy);
+	public WebStrategyPO[] getStrategy(String hotelName);
+	public boolean addStrategy(WebStrategyPO strategy);
+	public boolean modifyStrategy(WebStrategyPO strategy);
+	public boolean delStrategy(WebStrategyPO strategy);
 }

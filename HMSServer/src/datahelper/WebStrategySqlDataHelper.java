@@ -9,8 +9,9 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 import PO.WebStrategyPO;
+import datahelperinterface.WebStrategyDataHelper;
 
-public class WebStrategySqlDataHelper {
+public class WebStrategySqlDataHelper implements WebStrategyDataHelper{
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/SE2";

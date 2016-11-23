@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.rmi.RemoteException"/>
-<fullyQualifiedTypeName name="PO.StrategyPO"/>
-<fullyQualifiedTypeName name="java.rmi.server.UnicastRemoteObject"/>
-<fullyQualifiedTypeName name="order_bl_serv.OrderBlServ"/>
-<fullyQualifiedTypeName name="java.rmi.server.Operation"/>
 <fullyQualifiedTypeName name="credit_bl_serv.CreditBlServ"/>
 <fullyQualifiedTypeName name="manage_bl_serv.ManageBlServ"/>
 <fullyQualifiedTypeName name="strategy_bl_serv.HotelStrategyBlServ"/>
@@ -46,8 +41,23 @@
 <fullyQualifiedTypeName name="PO.CreditPO"/>
 <fullyQualifiedTypeName name="PO.HotelPO"/>
 <fullyQualifiedTypeName name="PO.RoomPO"/>
-<fullyQualifiedTypeName name="PO.HotelStrategyPO"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="PO.WebStrategyPO"/>
 <fullyQualifiedTypeName name="PO.OrderPO"/>
+<fullyQualifiedTypeName name="datahelperinterface.CommentDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.CompaniesDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.CreditDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.HotelDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.HotelStrategyDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.OrderDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.RoomDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.SubOrderDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.UserDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.WebStrategyDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.DataFactory"/>
+<fullyQualifiedTypeName name="PO.HotelStrategyPO"/>
+<fullyQualifiedTypeName name="PO.WebStrategyPO"/>
+<fullyQualifiedTypeName name="strategy_data_serv.WebStrategyDataServ"/>
+<fullyQualifiedTypeName name="strategy_data_serv.HotelStrategyDataServ"/>
+<fullyQualifiedTypeName name="DataService.HotelStrategyDataServ"/>
+<fullyQualifiedTypeName name="DataService.WebStrategyDataServ"/>
 </qualifiedTypeNameHistroy>

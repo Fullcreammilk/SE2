@@ -9,8 +9,9 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 import PO.OrderPO;
+import datahelperinterface.OrderDataHelper;
 
-public class OrderSqlDataHelper {
+public class OrderSqlDataHelper implements OrderDataHelper{
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/SE2";
@@ -38,8 +39,8 @@ public class OrderSqlDataHelper {
 	        ArrayList<OrderPO> list=new ArrayList<OrderPO>();
 	        while(rs.next()){
 	        	OrderPO o=new OrderPO(rs.getInt("id")+"",rs.getInt("userid")+"",rs.getString("hotel"),
-	        			rs.getString("username"),rs.getString("usercotact"),rs.getString("type"),
-	        			rs.getString("lasttime"),rs.getDouble("totel"));
+	        			rs.getString("username"),rs.getString("usercotact"),rs.getString("type"),rs.getString("intime"),
+	        			rs.getString("outtime"),rs.getString("lasttime"),rs.getDouble("totel"));
 	        	list.add(o);
 	        }
 	        pstmt.close();

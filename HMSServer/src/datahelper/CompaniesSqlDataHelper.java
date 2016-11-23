@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-public class CompaniesSqlDataHelper {
+import datahelperinterface.CompaniesDataHelper;
+
+public class CompaniesSqlDataHelper implements CompaniesDataHelper{
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/SE2";

@@ -9,9 +9,10 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 import PO.CreditPO;
+import datahelperinterface.CreditDataHelper;
 
-public class CreditSqlDataHelper {
-	private static Connection getConn() {
+public class CreditSqlDataHelper  implements CreditDataHelper{
+	private static Connection getConn(){
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/SE2";
 	    String username = "root";

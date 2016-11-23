@@ -10,7 +10,7 @@ public class OrderPO {
 	private String type;
 	
 	public OrderPO(String id,String userid,String hotel,String username,
-			String usercontact,String t,String lasttime,double totel){
+			String usercontact,String t,String intime,String outtime,String lasttime,double totel){
 		super();
 		this.id=id;
 		this.username=username;
@@ -18,6 +18,8 @@ public class OrderPO {
 		this.usercontact=usercontact;
 		this.userid=userid;
 		this.type=t;
+		this.intime=intime;
+		this.outtime=outtime;
 		this.lasttime=lasttime;
 		this.totel=totel;
 	}

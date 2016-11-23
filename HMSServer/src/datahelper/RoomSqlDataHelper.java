@@ -9,8 +9,9 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 import PO.RoomPO;
+import datahelperinterface.RoomDataHelper;
 
-public class RoomSqlDataHelper {
+public class RoomSqlDataHelper implements RoomDataHelper{
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/SE2";

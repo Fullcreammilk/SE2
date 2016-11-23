@@ -75,4 +75,20 @@ public class HotelPO {
 	public ArrayList<HotelStrategyPO> getStrategy(){
 		return this.strategy;
 	}
+	
+	public void setComment(ArrayList<String> c){
+		
+	}
+	
+	public void setCompanies(ArrayList<String> c){
+		
+	}
+	
+	public void setRomm(ArrayList<RoomPO> r){
+		
+	}
+	
+	public void setStrategy(ArrayList<HotelStrategyPO> s){
+		
+	}
 }

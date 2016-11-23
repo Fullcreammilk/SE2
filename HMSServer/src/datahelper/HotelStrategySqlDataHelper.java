@@ -9,8 +9,9 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
 import PO.HotelStrategyPO;
+import datahelperinterface.HotelStrategyDataHelper;
 
-public class HotelStrategySqlDataHelper {
+public class HotelStrategySqlDataHelper implements HotelStrategyDataHelper{
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
 	    String url = "jdbc:mysql://localhost:3306/SE2";

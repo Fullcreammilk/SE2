@@ -3,8 +3,8 @@ package rmi;
 import java.rmi.Remote;
 
 import DataService.HotalDataServ;
-import DataService.hotelStrategyDataImpl;
-import DataService.memberStrategyDataImpl;
+import DataService.HotelStrategyDataServ;
+import DataService.WebStrategyDataServ;
 import DataService.revokOrderDataServ;
 import credit_data_serv.CreditDataServ;
 import order_data_serv.OrderDataServ;
@@ -55,12 +55,12 @@ public class RemoteHelper {
 		return (RoomDataServ) remote;
 	}
 	
-	public hotelStrategyDataImpl getHotelStrategyDataImpl() {
-		return (hotelStrategyDataImpl) remote;
+	public HotelStrategyDataServ getHotelStrategyDataServ() {
+		return (HotelStrategyDataServ) remote;
 	}
 	
-	public memberStrategyDataImpl getMemberStrategyDataImpl() {
-		return (memberStrategyDataImpl) remote;
+	public WebStrategyDataServ getWebStrategyDataServ() {
+		return (WebStrategyDataServ) remote;
 	}
 	
 	public UserDataServ getUserDateServ() {

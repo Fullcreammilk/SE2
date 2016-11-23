@@ -3,12 +3,14 @@ package datahelper;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
+import datahelperinterface.CommentDataHelper;
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class CommentSqlDataHelper {
+public class CommentSqlDataHelper implements CommentDataHelper{
 	
 	private static Connection getConn() {
 	    String driver = "com.mysql.jdbc.Driver";
