@@ -2,21 +2,20 @@ package strategy_data_serv;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.HotelStrategyPO;
 
 public interface HotelStrategyDataServ extends Remote{
 	
-	public void insertHotelStrategy(HotelStrategyPO strategyPO) throws RemoteException;
+	public boolean insertHotelStrategy(HotelStrategyPO strategyPO) throws RemoteException;
 	
-	public HotelStrategyPO[] getHotelStrategyList () throws RemoteException;
+	public ArrayList<HotelStrategyPO> getHotelStrategyList (String hotelname) throws RemoteException;
 	
-	public void deleteHotelStrategy(String id) throws RemoteException;
+	public boolean deleteHotelStrategy(HotelStrategyPO strategyPO) throws RemoteException;
 	
-	public void modifiedHotelStrategy(HotelStrategyPO strategy) throws RemoteException;
+	public boolean modifiedHotelStrategy(HotelStrategyPO strategy) throws RemoteException;
 	
-	public void init() throws RemoteException;
-	
-	public void finish() throws RemoteException;
+
 	
 }

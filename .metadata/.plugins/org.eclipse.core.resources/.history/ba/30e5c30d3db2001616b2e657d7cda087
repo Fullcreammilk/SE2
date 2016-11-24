@@ -1,0 +1,28 @@
+package comment_data_servlmpl;
+
+import java.util.ArrayList;
+
+import PO.CommentPO;
+import commet_data_serv.CommentDataServ;
+
+public class CommentDataServlmpl implements CommentDataServ{
+
+	@Override
+	public ArrayList<CommentPO> getComments(String hotelname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean insert(CommentPO c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(CommentPO c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -2,12 +2,12 @@ package datahelperinterface;
 
 import java.util.ArrayList;
 
-import datahelper.Comment;
+import PO.CommentPO;
 
 public interface CommentDataHelper {
-	public ArrayList<Comment> getAll();
+	public ArrayList<CommentPO> getAll();
 	
-	public int insert(Comment c);
+	public int insert(CommentPO c);
 	
-	public int delete(Comment c);
+	public int delete(CommentPO c);
 }

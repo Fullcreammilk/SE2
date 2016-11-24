@@ -11,9 +11,9 @@ public interface HotalDataServ extends Remote {
 	
 	public HotelPO getHotel (String name) throws RemoteException;
 	
-	public void deleteHotel (String name) throws RemoteException;
+	public boolean deleteHotel (String name) throws RemoteException;
 	
-	public void modifiedHotel (HotelPO hotel) throws RemoteException;
+	public boolean modifiedHotel (HotelPO hotel) throws RemoteException;
 	
 	public HotelPO[] getHotelList (String businesscircle) throws RemoteException;
 }

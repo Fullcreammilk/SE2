@@ -1,0 +1,49 @@
+package comment_data_servlmpl;
+
+import java.util.ArrayList;
+
+import PO.CommentPO;
+import commet_data_serv.CommentDataServ;
+import datahelper.DataFactorylmpl;
+import datahelperinterface.CommentDataHelper;
+import datahelperinterface.DataFactory;
+
+public class CommentDataServlmpl implements CommentDataServ{
+	private ArrayList<CommentPO> list;
+	private CommentDataHelper commentDataHelper;
+	private DataFactory dataFactory;
+	private static CommentDataServlmpl commentDataServlmpl;
+	
+	public static CommentDataServlmpl getInstance(){
+		if(commentDataServlmpl==null)
+			commentDataServlmpl=new CommentDataServlmpl();
+		return commentDataServlmpl;
+	}
+	
+	private CommentDataServlmpl(){
+		if(list==null){
+			dataFactory=new DataFactorylmpl();
+			commentDataHelper=dataFactory.getCommentDataHelper();
+			list=commentDataHelper.getAll();
+		}
+	}
+
+	@Override
+	public ArrayList<CommentPO> getComments(String hotelname) {
+		ArrayList<CommentPO> res=new ArrayList<CommentPO>();
+		for(int i=;i<list.)
+	}
+
+	@Override
+	public boolean insert(CommentPO c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean delete(CommentPO c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

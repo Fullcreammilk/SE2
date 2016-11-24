@@ -3,6 +3,7 @@ package datahelper;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
+import PO.CommentPO;
 import datahelperinterface.CommentDataHelper;
 
 import java.sql.DriverManager;
@@ -29,16 +30,16 @@ public class CommentSqlDataHelper implements CommentDataHelper{
 	    return conn;
 	}
 	
-	public ArrayList<Comment> getAll(){
+	public ArrayList<CommentPO> getAll(){
 		Connection conn = getConn();
 	    String sql = "select * from comment";
 	    PreparedStatement pstmt;
 	    try{
 	    	pstmt = (PreparedStatement)conn.prepareStatement(sql);
 	        ResultSet rs = pstmt.executeQuery();
-	        ArrayList<Comment> list=new ArrayList<Comment>();
+	        ArrayList<CommentPO> list=new ArrayList<CommentPO>();
 	        while(rs.next()){
-	        	Comment c=new Comment(rs.getString("hotelname"),rs.getString("detials"));
+	        	CommentPO c=new CommentPO(rs.getString("hotelname"),rs.getString("detials"));
 	        	list.add(c);
 	        }
 	        conn.close();
@@ -50,7 +51,7 @@ public class CommentSqlDataHelper implements CommentDataHelper{
 	    return null;
 	}
 	
-	public int insert(Comment c){
+	public int insert(CommentPO c){
 		Connection conn=getConn();
 		int i=0;
 		PreparedStatement pstmt;
@@ -66,7 +67,7 @@ public class CommentSqlDataHelper implements CommentDataHelper{
 		    return i;
 	}
 	
-	public int delete(Comment c){
+	public int delete(CommentPO c){
 		Connection conn=getConn();
 		int i=0;
 		PreparedStatement pstmt;

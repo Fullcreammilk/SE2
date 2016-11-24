@@ -1,0 +1,36 @@
+package credit_data_servlmpl;
+
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+
+import PO.CreditPO;
+import credit_data_serv.CreditDataServ;
+import datahelperinterface.CreditDataHelper;
+import datahelperinterface.DataFactory;
+
+public class CreditDataServlmpl implements CreditDataServ{
+	private ArrayList<CreditPO> list;
+	private CreditDataHelper creditDataHelper;
+	private DataFactory dataFatory;
+	private static CreditDataServlmpl creditDataServlmpl;
+	
+
+	@Override
+	public CreditPO getDetial(String id) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insertCredit(CreditPO credit) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifiedCredit(CreditPO credit) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

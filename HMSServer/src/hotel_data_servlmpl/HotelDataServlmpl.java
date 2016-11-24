@@ -6,6 +6,7 @@ import PO.HotelPO;
 import hotel_data_serv.HotalDataServ;
 
 public class HotelDataServlmpl implements HotalDataServ{
+	
 
 	@Override
 	public void insertHotel(HotelPO hotel) throws RemoteException {
@@ -20,15 +21,13 @@ public class HotelDataServlmpl implements HotalDataServ{
 	}
 
 	@Override
-	public void deleteHotel(String name) throws RemoteException {
-		// TODO Auto-generated method stub
-		
+	public boolean deleteHotel(String name) throws RemoteException {
+		return false;	
 	}
 
 	@Override
-	public void modifiedHotel(HotelPO hotel) throws RemoteException {
-		// TODO Auto-generated method stub
-		
+	public boolean modifiedHotel(HotelPO hotel) throws RemoteException {
+		return false;
 	}
 
 	@Override

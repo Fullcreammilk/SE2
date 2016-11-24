@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="credit_bl_serv.CreditBlServ"/>
-<fullyQualifiedTypeName name="manage_bl_serv.ManageBlServ"/>
-<fullyQualifiedTypeName name="strategy_bl_serv.HotelStrategyBlServ"/>
 <fullyQualifiedTypeName name="strategy_bl_serv.WebStrategyBlServ"/>
 <fullyQualifiedTypeName name="hotel_bl_serv.HotelBlServ"/>
 <fullyQualifiedTypeName name="book_bl_serv.BookBlServ"/>
@@ -41,23 +38,26 @@
 <fullyQualifiedTypeName name="PO.CreditPO"/>
 <fullyQualifiedTypeName name="PO.HotelPO"/>
 <fullyQualifiedTypeName name="PO.RoomPO"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="PO.OrderPO"/>
-<fullyQualifiedTypeName name="datahelperinterface.CommentDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.CompaniesDataHelper"/>
-<fullyQualifiedTypeName name="datahelperinterface.CreditDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.HotelDataHelper"/>
-<fullyQualifiedTypeName name="datahelperinterface.HotelStrategyDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.OrderDataHelper"/>
-<fullyQualifiedTypeName name="datahelperinterface.RoomDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.SubOrderDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.UserDataHelper"/>
-<fullyQualifiedTypeName name="datahelperinterface.WebStrategyDataHelper"/>
-<fullyQualifiedTypeName name="datahelperinterface.DataFactory"/>
 <fullyQualifiedTypeName name="PO.HotelStrategyPO"/>
 <fullyQualifiedTypeName name="PO.WebStrategyPO"/>
 <fullyQualifiedTypeName name="strategy_data_serv.WebStrategyDataServ"/>
 <fullyQualifiedTypeName name="strategy_data_serv.HotelStrategyDataServ"/>
 <fullyQualifiedTypeName name="DataService.HotelStrategyDataServ"/>
 <fullyQualifiedTypeName name="DataService.WebStrategyDataServ"/>
+<fullyQualifiedTypeName name="datahelperinterface.CreditDataHelper"/>
+<fullyQualifiedTypeName name="PO.CommentPO"/>
+<fullyQualifiedTypeName name="commet_data_serv.CommentDataServ"/>
+<fullyQualifiedTypeName name="datahelperinterface.CommentDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.HotelStrategyDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.WebStrategyDataHelper"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="datahelperinterface.RoomDataHelper"/>
+<fullyQualifiedTypeName name="datahelperinterface.DataFactory"/>
+<fullyQualifiedTypeName name="datahelper.DataFactorylmpl"/>
 </qualifiedTypeNameHistroy>
