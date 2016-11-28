@@ -5,14 +5,13 @@ import java.util.ArrayList;
 
 public class UserPO {
 	private String id,name,contactInof,specialInfo;
-	private int creditTol,vipLev;
+	private int creditTol,vipLev,isLogin;
 	private String password;
-	private ArrayList<OrderPO> orders;
 	private ArrayList<CreditPO> credits;
 	private String type;
 	
 	public UserPO(String id,String password,String contactInfo,String name,String specialInfo,
-			int creditTol,int vipLev,String type){
+			int creditTol,int vipLev,int isLogin,String type){
 		super();
 		this.id=id;
 		this.password=password;
@@ -22,6 +21,7 @@ public class UserPO {
 		this.vipLev=vipLev;
 		this.type=type;
 		this.specialInfo=specialInfo;
+		this.isLogin=isLogin;
 		//to be continue...
 	}
 	
@@ -78,11 +78,19 @@ public class UserPO {
 		return this.specialInfo;
 	}
 	
-	public ArrayList<OrderPO> getOrder(){
-		return this.orders;
-	}
-	
 	public ArrayList<CreditPO> getCredit(){
 		return this.credits;
+	}
+	
+	public void setIsLogin(int i){
+		this.isLogin=i;
+	}
+	
+	public int getIsLogin(){
+		return this.isLogin;
+	}
+	
+	public void setCredit(ArrayList<CreditPO> c){
+		this.credits=c;
 	}
 }

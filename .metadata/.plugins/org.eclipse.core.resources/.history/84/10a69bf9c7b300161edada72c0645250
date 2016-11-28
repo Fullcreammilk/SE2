@@ -1,0 +1,79 @@
+package order_data_servlmpl;
+
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+
+import PO.OrderPO;
+import datahelper.DataFactorylmpl;
+import datahelper.SubOrder;
+import datahelper.SubOrderDataServlmpl;
+import datahelperinterface.DataFactory;
+import datahelperinterface.OrderDataHelper;
+import datahelperinterface.SubOrderDataServ;
+import order_data_serv.OrderDataServ;
+
+public class OrderDataServlmpl implements OrderDataServ{
+	private ArrayList<OrderPO> list;
+	private DataFactory dataFactory;
+	private OrderDataHelper orderDataHelper;
+	private SubOrderDataServ subOrderDataServ;
+	private static OrderDataServlmpl orderDataServlmpl;
+	
+	public static OrderDataServlmpl getIntanse(){
+		if(orderDataServlmpl==null)
+			orderDataServlmpl=new OrderDataServlmpl();
+		return orderDataServlmpl;
+	}
+	
+	private OrderDataServlmpl(){
+		if(list==null){
+			dataFactory=new DataFactorylmpl();
+			orderDataHelper=dataFactory.getOrderDataHelper();
+			list=orderDataHelper.getAll();
+			subOrderDataServ=SubOrderDataServlmpl.getInstance();
+		}
+	}
+
+	@Override
+	public boolean insertOrder(OrderPO po) throws RemoteException {
+		boolean tag=true;
+		for(int i=0;i<po.getRoom().size();i++){
+			if(!tag)
+				break;
+			subOrderDataServ.insertSubOrder(new SubOrder(po.getID(),po.getRoom().get(i),(int)po.getNum().get(i),
+					(double)po.getPrice().get(i),(double)po.getSubtotel().get(i)));
+		}
+		if(tag){
+			int i=orderDataHelper.insert(po);
+			if(i==0)
+				tag=false;
+			else{
+				list=orderDataHelper.getAll();
+			}
+		}
+		return tag;
+	}
+
+	@Override
+	public boolean modifiedOrder(OrderPO po) throws RemoteException {
+		int i=orderDataHelper.update(po);
+		if(i==0)
+			return false;
+		else{
+			list=orderDataHelper.getAll();
+			return true;
+		}
+	}
+
+	@Override
+	public ArrayList<OrderPO> getOrders(String OrderID) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public OrderPO getOrderByType(String id, String type) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

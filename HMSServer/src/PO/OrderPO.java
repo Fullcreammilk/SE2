@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class OrderPO {
 	private String id,userid,username,usercontact,hotel,intime,outtime,lasttime;
 	private ArrayList<String> room;
-	private ArrayList<Integer> num,price,subtotel;
+	private ArrayList<Integer> num;
+	private ArrayList<Double> price,subtotel;
 	private double totel;
 	private String type;
 	
@@ -40,11 +41,11 @@ public class OrderPO {
 		return this.usercontact;
 	}
 	
-	public ArrayList<Integer> getPrice(){
+	public ArrayList<Double> getPrice(){
 		return this.price;
 	}
 	
-	public ArrayList<Integer> getSubtotel(){
+	public ArrayList<Double> getSubtotel(){
 		return this.subtotel;
 	}
 	
@@ -94,5 +95,21 @@ public class OrderPO {
 	
 	public String getLastTime(){
 		return this.lasttime ;
+	}
+	
+	public void setRoom(ArrayList<String> room){
+		this.room=room;
+	}
+	
+	public void setNum(ArrayList<Integer> num){
+		this.num=num;
+	}
+	
+	public void setPrice(ArrayList<Double> price){
+		this.price=price;
+	}
+	
+	public void setSubtotel(ArrayList<Double> subtotel){
+		this.subtotel=subtotel;
 	}
 }

@@ -42,7 +42,7 @@ public class UserSqlDataHelper implements UserDataHelper{
 	        while(rs.next()){
 	        	UserPO p=new UserPO(rs.getInt("id")+"",rs.getString("password"),
 	        			rs.getString("contact"),rs.getString("name"),rs.getString("specialInfo"),
-	        			rs.getInt("creditTol"),(int)rs.getByte("vipLev"),rs.getString("type"));
+	        			rs.getInt("creditTol"),(int)rs.getByte("vipLev"),rs.getInt("islogin"),rs.getString("type"));
 	        	list.add(p);
 	        }
 	        pstmt.close();
@@ -62,7 +62,7 @@ public class UserSqlDataHelper implements UserDataHelper{
 		String sql="update users set password='" + user.getPassword() +
 				"', contact='"+user.getContactInfo()+"', name='"+user.getName()+
 				"',specialInfo='"+user.getSpecialInfo()+"',creditTol="+user.getCreditTol()+
-				",vipLve="+user.getVipLev()+"where id='" + user.getID() + "'";
+				",vipLve="+user.getVipLev()+",islogin="+user.getIsLogin()+"where id='" + user.getID() + "'";
 		try {
 	        pstmt = (PreparedStatement) conn.prepareStatement(sql);
 	        i = pstmt.executeUpdate();
@@ -78,8 +78,8 @@ public class UserSqlDataHelper implements UserDataHelper{
 		Connection conn=getConn();
 		int i=0;
 		PreparedStatement pstmt;
-		String sql="insert into users(name,contact,creditTol,vipTol,password,type,specialInfo) values("+
-		"'"+user.getName()+"','"+user.getContactInfo()+"',"+user.getCreditTol()+","+user.getVipLev()+
+		String sql="insert into users(name,contact,creditTol,vipTol,islogin,password,type,specialInfo) values("+
+		"'"+user.getName()+"','"+user.getContactInfo()+"',"+user.getCreditTol()+","+user.getVipLev()+","+user.getIsLogin()+
 		",'"+user.getPassword()+"','"+user.getType()+"','"+user.getSpecialInfo()+"')";
 		 try {
 		        pstmt = (PreparedStatement) conn.prepareStatement(sql);

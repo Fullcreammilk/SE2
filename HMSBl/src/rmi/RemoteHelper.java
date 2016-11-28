@@ -5,11 +5,8 @@ import java.rmi.Remote;
 import DataService.HotalDataServ;
 import DataService.HotelStrategyDataServ;
 import DataService.WebStrategyDataServ;
-import DataService.revokOrderDataServ;
 import credit_data_serv.CreditDataServ;
 import order_data_serv.OrderDataServ;
-import order_data_serv.abnormalOrderDataServ;
-import order_data_serv.normalOrderDataServ;
 import room_data_serv.RoomDataServ;
 import user_data_serv.UserDataServ;
 
@@ -37,18 +34,6 @@ public class RemoteHelper {
 	
 	public OrderDataServ getOrderDataServ() {
 		return (OrderDataServ) remote;
-	}
-	
-	public normalOrderDataServ getNormalOrderDataServ() {
-		return (normalOrderDataServ) remote;
-	}
-	
-	public abnormalOrderDataServ getAbnormalOrderDataServ() {
-		return (abnormalOrderDataServ) remote;
-	}
-	
-	public revokOrderDataServ getRevokOrderDataServ() {
-		return (revokOrderDataServ) remote;
 	}
 	
 	public RoomDataServ getRoomDataServ() {
