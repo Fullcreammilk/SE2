@@ -13,7 +13,7 @@ import javafx.scene.layout.AnchorPane;
 public class MainApp extends Application {
 
 	private Stage primaryStage;
-	
+
 	@Override
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
@@ -47,25 +47,86 @@ public class MainApp extends Application {
 		}		
 	}
 	
+
 	/**
-	 * 显示注册界面
+	 * 显示选择注册类型界面
 	 */
-	public void showRegisterUI(){
+	public MemberType showRegisterUI(){
 		try{
+	
 			// Load the fxml file and create a new stage for the choosetype dialog.
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(MainApp.class.getResource("ChooseType.fxml"));
 			AnchorPane page = (AnchorPane) loader.load();
 			
-			Stage typeStage = new Stage();
-			typeStage.setTitle("Register");
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("Register");
 			
+			ChooseTypeController controller = loader.getController();
+			controller.setDialogStage(dialogStage);
 			Scene scene = new Scene(page);
-			typeStage.setScene(scene);
-			typeStage.show();
+			dialogStage.setScene(scene);
+			dialogStage.showAndWait();
+			
+			return controller.getType();
 		}catch(IOException e){
 			e.printStackTrace();
 		}
+		return null;		
+	}
+	
+	
+	/**
+	 * 显示普通会员注册界面
+	 */
+	public void showNormalUI(){
+		try{
+	
+			// Load the fxml file and create a new stage for the choosetype dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("Register(Normal).fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+			
+			Stage stage = new Stage();
+			stage.setTitle("Register");
+			
+			Scene scene = new Scene(page);
+			stage.setScene(scene);
+			stage.show();
+		}catch(IOException e){
+			e.printStackTrace();
+		}		
+	}
+	
+	
+	/**
+	 * 显示企业会员注册界面
+	 */
+	public void showBusiUI(){
+		try{
+//			typeStage.close();
+			// Load the fxml file and create a new stage for the choosetype dialog.
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(MainApp.class.getResource("Register(Busi).fxml"));
+			AnchorPane page = (AnchorPane) loader.load();
+			
+			Stage stage = new Stage();
+			stage.setTitle("Register");
+			
+			Scene scene = new Scene(page);
+			stage.setScene(scene);
+			stage.show();
+		}catch(IOException e){
+			e.printStackTrace();
+		}		
+	}
+	
+	
+	/**
+	 * 输入信息不完整，显示错误信息
+	 */
+	public void showErrorMessage(){
+	
 	}
 	
 	
