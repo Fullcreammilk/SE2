@@ -1,9 +1,14 @@
 package user_main_ui;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.*;
-import javafx.scene.control.*;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 public class MainUIController {
 
 	@FXML
@@ -28,13 +33,15 @@ public class MainUIController {
 	@FXML
 	private Label memberLevelLabel; //会员等级
 	
+
 	
-	//用户主界面的可选项，首页，个人资料，信用记录，订单信息，过往酒店信息
-	private ObservableList<String> options = FXCollections.observableArrayList("首页",
-			"个人资料","信用记录","订单信息","过往酒店信息");
 	
-	@FXML
-	private ListView<String> listView = new ListView<>(options);
+//	//用户主界面的可选项，首页，个人资料，信用记录，订单信息，过往酒店信息
+//	private ObservableList<String> options = FXCollections.observableArrayList("首页",
+//			"个人资料","信用记录","订单信息","过往酒店信息");
+//	
+//	@FXML
+//	private ListView<String> listView = new ListView<>(options);
 
     // Reference to the main application.
     private UserMainApp mainApp;
@@ -46,7 +53,8 @@ public class MainUIController {
      */
 	@FXML
 	public void initialize(){
-		listView.setItems(options);
+//		listView.setItems(options);
+
 	}
 	
     /**
@@ -58,7 +66,7 @@ public class MainUIController {
         this.mainApp = mainApp;
 
         // Add observable list data to the table
-        listView.setItems(options);
+//        listView.setItems(options);
 //        listView.getSelectionModel().get
     }
     
