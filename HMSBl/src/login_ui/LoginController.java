@@ -1,20 +1,16 @@
 package login_ui;
-import javafx.fxml.*;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
-import javafx.stage.Stage;
-
 import java.io.IOException;
 
-import org.controlsfx.dialog.Dialogs;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 public class LoginController {
 
@@ -30,6 +26,12 @@ public class LoginController {
 	
 	@FXML
 	private Hyperlink signUp;
+	
+	@FXML
+	private Button okButton = new Button("OK"); //错误提示的OK按钮
+	
+	
+	public Stage errorStage = new Stage();//错误提示的Stage
 	
 	//对main application的引用
 	private MainApp mainApp;
@@ -50,8 +52,9 @@ public class LoginController {
     }
     
 
+
      @FXML
-     public void test(){
+     public void checkLoginInfo(){
     	 if(isInputValid()){
     		 System.out.println("lol"); 
     	 }
@@ -61,17 +64,28 @@ public class LoginController {
     			// Load the fxml file and create a new stage for the choosetype dialog.
     			FXMLLoader loader = new FXMLLoader();
    				loader.setLocation(MainApp.class.getResource("AlertDialog_css.fxml"));
-   				AnchorPane page = (AnchorPane) loader.load();
+   				GridPane page = (GridPane) loader.load();
     				
-   				Stage stage = new Stage();
-   				stage.setTitle("Message");
+   				errorStage.setTitle("Message");
    				Scene scene = new Scene(page);
-    			stage.setScene(scene);
-    			stage.show();
+    			errorStage.setScene(scene);
+    			errorStage.show();
+    			okButton.setOnAction(new EventHandler<ActionEvent>(){
+    		        @Override
+    		        public void handle(ActionEvent event) {
+    		        	errorStage.close();
+    		        }
+    		    });
+    			
     		}catch(IOException e){
     			e.printStackTrace();
     		}	    		 
     	 }
+     }
+     
+     @FXML
+     public void closeErrorMessage(){
+    	 errorStage.close();
      }
      
      /**

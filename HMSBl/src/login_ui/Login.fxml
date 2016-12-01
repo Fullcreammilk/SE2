@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_ui.LoginController">
    <children>
-      <Button fx:id="Confirm" layoutX="193.0" layoutY="313.0" mnemonicParsing="false" onAction="#test" prefHeight="35.0" prefWidth="300.0">
+      <Button fx:id="Confirm" layoutX="193.0" layoutY="313.0" mnemonicParsing="false" onAction="#checkLoginInfo" prefHeight="35.0" prefWidth="300.0">
          <font>
             <Font size="15.0" />
          </font>
