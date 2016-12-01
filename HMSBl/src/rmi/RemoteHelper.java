@@ -2,16 +2,7 @@ package rmi;
 
 import java.rmi.Remote;
 
-import DataService.HotalDataServ;
-import DataService.hotelStrategyDataImpl;
-import DataService.memberStrategyDataImpl;
-import DataService.revokOrderDataServ;
-import credit_data_serv.CreditDataServ;
-import order_data_serv.OrderDataServ;
-import order_data_serv.abnormalOrderDataServ;
-import order_data_serv.normalOrderDataServ;
-import room_data_serv.RoomDataServ;
-import user_data_serv.UserDataServ;
+import DataService.*;
 
 public class RemoteHelper {
 	private Remote remote;
@@ -20,7 +11,7 @@ public class RemoteHelper {
 	public static RemoteHelper getInstance() {
 		return remoteHelper;
 	}
-	
+
 	public RemoteHelper() {}
 	
 	public void setRemote(Remote remote) {
@@ -29,6 +20,10 @@ public class RemoteHelper {
 	
 	public CreditDataServ getCreditDataServ() {
 		return (CreditDataServ) remote;
+	}
+
+	public CommentDataServ getCommentDataServ() {
+		return (CommentDataServ) remote;
 	}
 	
 	public HotalDataServ getHotelDataServ() {
@@ -39,31 +34,19 @@ public class RemoteHelper {
 		return (OrderDataServ) remote;
 	}
 	
-	public normalOrderDataServ getNormalOrderDataServ() {
-		return (normalOrderDataServ) remote;
-	}
-	
-	public abnormalOrderDataServ getAbnormalOrderDataServ() {
-		return (abnormalOrderDataServ) remote;
-	}
-	
-	public revokOrderDataServ getRevokOrderDataServ() {
-		return (revokOrderDataServ) remote;
-	}
-	
 	public RoomDataServ getRoomDataServ() {
 		return (RoomDataServ) remote;
 	}
 	
-	public hotelStrategyDataImpl getHotelStrategyDataImpl() {
-		return (hotelStrategyDataImpl) remote;
+	public HotelStrategyDataServ getHotelStrategyDataServ() {
+		return (HotelStrategyDataServ) remote;
 	}
 	
-	public memberStrategyDataImpl getMemberStrategyDataImpl() {
-		return (memberStrategyDataImpl) remote;
+	public WebStrategyDataServ getWebStrategyDataServ() {
+		return (WebStrategyDataServ) remote;
 	}
 	
-	public UserDataServ getUserDateServ() {
+	public UserDataServ getUserDataServ() {
 		return (UserDataServ) remote;
 	}
 }

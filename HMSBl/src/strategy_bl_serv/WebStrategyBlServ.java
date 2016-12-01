@@ -1,10 +1,40 @@
 package strategy_bl_serv;
 
-import PO.StrategyPO;
+import VO.StrategyVO;
+import strategy_bl_servlmpl.WebStrategyBlServlmpl;
+
+import java.util.Iterator;
 
 public interface WebStrategyBlServ {
-	public StrategyPO[] getStrategy(String hotelName);
-	public boolean addStrategy(StrategyPO strategy);
-	public boolean modifyStrategy(StrategyPO strategy);
-	public boolean delStrategy(StrategyPO strategy);
+
+	public static WebStrategyBlServ getInstance() {
+		return new WebStrategyBlServlmpl();
+	}
+
+	/**
+	 * 得到所有网站促销策略
+	 * @return
+     */
+	public Iterator<StrategyVO> getStrategy();
+
+	/**
+	 * 增加一条策略
+	 * @param strategy
+	 * @return
+     */
+	public boolean addStrategy(StrategyVO strategy);
+
+	/**
+	 * 修改一条策略
+	 * @param strategy
+	 * @return
+     */
+	public boolean modifyStrategy(StrategyVO strategy);
+
+	/**
+	 * 删除一条策略
+	 * @param strategy
+	 * @return
+     */
+	public boolean delStrategy(StrategyVO strategy);
 }
