@@ -8,7 +8,7 @@ import PO.CreditPO;
 
 public interface CreditDataServ extends Remote{
 	
-	public ArrayList<CreditPO> getDetial(String id) throws RemoteException;
+	public ArrayList<CreditPO> getDetial(String userid) throws RemoteException;
 	
 	public boolean insertCredit(CreditPO credit) throws RemoteException;
 }

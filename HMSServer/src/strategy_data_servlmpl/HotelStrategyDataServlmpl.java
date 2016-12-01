@@ -10,7 +10,7 @@ import datahelperinterface.HotelStrategyDataHelper;
 import strategy_data_serv.HotelStrategyDataServ;
 
 public class HotelStrategyDataServlmpl implements HotelStrategyDataServ{
-	private ArrayList<HotelStrategyPO> list=new ArrayList<HotelStrategyPO>();
+	private ArrayList<HotelStrategyPO> list;
 	private DataFactory dataFactory;
 	private HotelStrategyDataHelper hotelStrategyDataHelper;
 	private static HotelStrategyDataServlmpl hotelStrategyDataServlmpl;

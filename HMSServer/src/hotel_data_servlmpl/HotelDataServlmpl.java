@@ -50,27 +50,35 @@ public class HotelDataServlmpl implements HotelDataServ{
 	@Override
 	public boolean insertHotel(HotelPO hotel) throws RemoteException {
 		boolean tag=true;
+		
+		if(hotel.getComment()!=null)
 		for(int i=0;i<hotel.getComment().size();i++){
 			if(!tag)
 				break;
 			tag=commentDataServ.insert(new CommentPO(hotel.getName(),hotel.getComment().get(i)));
 		}
 		
+		if(hotel.getCompanies()!=null)
 		for(int i=0;i<hotel.getCompanies().size();i++){
 			if(!tag)
 				break;
 			tag=companiesDataServ.insertCompany(new Company(hotel.getName(),hotel.getCompanies().get(i)));
 		}
+		
+		if(hotel.getRoom()!=null)
 		for(int i=0;i<hotel.getRoom().size();i++){
 			if(!tag)
 				break;
 			tag=roomDataServ.insertRoom(hotel.getRoom().get(i));
 		}
+		
+		if(hotel.getStrategy()!=null)
 		for(int i=0;i<hotel.getStrategy().size();i++){
 			if(!tag)
 				break;
 			tag=hotelStrategyDataServ.insertHotelStrategy(hotel.getStrategy().get(i));
 		}
+		
 		int i=hotelDataHelper.insert(hotel);
 		if(i==0)
 			tag=false;

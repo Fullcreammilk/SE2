@@ -189,17 +189,17 @@ public class DataRemoteObject extends UnicastRemoteObject implements
 
 
 	@Override
-	public ArrayList<CommentPO> getComments(String hotelname) {
+	public ArrayList<CommentPO> getComments(String hotelname) throws RemoteException{
 		return commentDataServ.getComments(hotelname);
 	}
 
 	@Override
-	public boolean insert(CommentPO c) {
+	public boolean insert(CommentPO c) throws RemoteException{
 		return commentDataServ.insert(c);
 	}
 
 	@Override
-	public boolean delete(CommentPO c) {
+	public boolean delete(CommentPO c) throws RemoteException{
 		return commentDataServ.delete(c); 
 	}
 

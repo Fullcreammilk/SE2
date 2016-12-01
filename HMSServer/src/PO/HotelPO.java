@@ -69,7 +69,7 @@ public class HotelPO {
 	}
 	
 	public ArrayList<RoomPO> getRoom(){
-		return this.getRoom();
+		return this.rooms;
 	}
 	
 	public ArrayList<HotelStrategyPO> getStrategy(){

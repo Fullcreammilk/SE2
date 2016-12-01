@@ -39,7 +39,7 @@ public class HotelStrategySqlDataHelper implements HotelStrategyDataHelper{
 	        ArrayList<HotelStrategyPO> list=new ArrayList<HotelStrategyPO>();
 	        while(rs.next()){
 	        	HotelStrategyPO p=new HotelStrategyPO(rs.getString("hotelname"),rs.getString("strategyname"),
-	        			rs.getString("specialinof"),rs.getDouble("discount"),rs.getString("type"));
+	        			rs.getString("specialinfo"),rs.getDouble("discount"),rs.getString("type"));
 	        	list.add(p);
 	        }
 	        pstmt.close();

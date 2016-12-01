@@ -32,4 +32,12 @@ public class HotelStrategyPO {
 	public String getType(){
 		return this.type;
 	}
+	
+	public void setSpecialInfo(String s){
+		this.specialInfo=s;
+	}
+	
+	public void setDiscount(double d){
+		this.discount=d;
+	}
 }

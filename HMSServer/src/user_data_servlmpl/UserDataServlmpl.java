@@ -36,6 +36,7 @@ public class UserDataServlmpl implements UserDataServ {
 	@Override
 	public boolean insertUser(UserPO user) throws RemoteException {
 		boolean tag=true;
+		if(user.getCredit()!=null)
 		for(int i=0;i<user.getCredit().size();i++){
 			if(!tag)
 				break;

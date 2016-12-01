@@ -39,7 +39,7 @@ public class OrderSqlDataHelper implements OrderDataHelper{
 	        ArrayList<OrderPO> list=new ArrayList<OrderPO>();
 	        while(rs.next()){
 	        	OrderPO o=new OrderPO(rs.getInt("id")+"",rs.getInt("userid")+"",rs.getString("hotel"),
-	        			rs.getString("username"),rs.getString("usercotact"),rs.getString("type"),rs.getString("intime"),
+	        			rs.getString("username"),rs.getString("usercontact"),rs.getString("type"),rs.getString("intime"),
 	        			rs.getString("outtime"),rs.getString("lasttime"),rs.getDouble("totel"));
 	        	list.add(o);
 	        }

@@ -1,5 +1,6 @@
 package comment_data_servlmpl;
 
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 import PO.CommentPO;
@@ -29,7 +30,7 @@ public class CommentDataServlmpl implements CommentDataServ{
 	}
 
 	@Override
-	public ArrayList<CommentPO> getComments(String hotelname) {
+	public ArrayList<CommentPO> getComments(String hotelname) throws RemoteException{
 		ArrayList<CommentPO> res=new ArrayList<CommentPO>();
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getHotelName().equals(hotelname)){
@@ -40,7 +41,7 @@ public class CommentDataServlmpl implements CommentDataServ{
 	}
 
 	@Override
-	public boolean insert(CommentPO c) {
+	public boolean insert(CommentPO c) throws RemoteException{
 		int i=commentDataHelper.insert(c);
 		if(i==0)
 			return false;
@@ -51,7 +52,7 @@ public class CommentDataServlmpl implements CommentDataServ{
 	}
 
 	@Override
-	public boolean delete(CommentPO c) {
+	public boolean delete(CommentPO c) throws RemoteException{
 		int i=commentDataHelper.delete(c);
 		if(i==0)
 			return false;

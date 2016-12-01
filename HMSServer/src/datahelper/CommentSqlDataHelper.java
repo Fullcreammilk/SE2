@@ -39,7 +39,7 @@ public class CommentSqlDataHelper implements CommentDataHelper{
 	        ResultSet rs = pstmt.executeQuery();
 	        ArrayList<CommentPO> list=new ArrayList<CommentPO>();
 	        while(rs.next()){
-	        	CommentPO c=new CommentPO(rs.getString("hotelname"),rs.getString("detials"));
+	        	CommentPO c=new CommentPO(rs.getString("hotelname"),rs.getString("details"));
 	        	list.add(c);
 	        }
 	        conn.close();
@@ -55,7 +55,7 @@ public class CommentSqlDataHelper implements CommentDataHelper{
 		Connection conn=getConn();
 		int i=0;
 		PreparedStatement pstmt;
-		String sql="insert into comment (hotelname,detials) values ("+"'"+c.getHotelName()+"','"+c.getDetials()+"')";
+		String sql="insert into comment (hotelname,details) values ("+"'"+c.getHotelName()+"','"+c.getDetials()+"')";
 		 try {
 		        pstmt = (PreparedStatement) conn.prepareStatement(sql);
 		        i = pstmt.executeUpdate();
@@ -71,7 +71,7 @@ public class CommentSqlDataHelper implements CommentDataHelper{
 		Connection conn=getConn();
 		int i=0;
 		PreparedStatement pstmt;
-		String sql="delete from comment where detials ='"+c.getDetials()+"'";
+		String sql="delete from comment where details ='"+c.getDetials()+"'";
 		try {
 	        pstmt = (PreparedStatement) conn.prepareStatement(sql);
 	        i = pstmt.executeUpdate();

@@ -1,5 +1,0 @@
-package datahelperinterface;
-
-public interface OrderDataHelper {
-
-}

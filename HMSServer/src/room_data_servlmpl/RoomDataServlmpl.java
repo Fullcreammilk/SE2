@@ -10,7 +10,7 @@ import datahelperinterface.RoomDataHelper;
 import room_data_serv.RoomDataServ;
 
 public class RoomDataServlmpl implements RoomDataServ{
-	private ArrayList<RoomPO> list=new ArrayList<RoomPO>();
+	private ArrayList<RoomPO> list;
 	private DataFactory dataFactory;
 	private RoomDataHelper roomDataHelper;
 	private static RoomDataServlmpl roomDataServlmpl;

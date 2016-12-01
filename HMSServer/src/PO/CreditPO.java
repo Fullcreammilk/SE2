@@ -8,7 +8,6 @@ public class CreditPO {
 	private String bh;
 	
 	public CreditPO(String id,String time,String userid,double totel,double change,String bh){
-		super();
 		this.id=id;
 		this.userid=userid;
 		this.time =time;

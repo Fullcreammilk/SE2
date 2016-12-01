@@ -1,0 +1,28 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import PO.OrderPO;
+import order_data_serv.OrderDataServ;
+import order_data_servlmpl.OrderDataServlmpl;
+
+public class OrderTest {
+	private OrderDataServ orderDataServ;
+	private OrderPO o1,o2,o3;
+	
+	@Before
+	public void setup(){
+		orderDataServ=OrderDataServlmpl.getIntanse();
+		o1=new OrderPO(null,"1","jinling","wanger","11","in","16/11/30","16/12/01","16/11/30/20/30",240);
+		o2=new OrderPO(null,"1","jinling","wanger","11","out","16/11/29","16/11/30","16/11/29/20/30",1200);
+		o3=new OrderPO(null,"2","yinling","zhangsan","22","in","16/11/30","16/12/01","16/11/30/20/30",240);
+	}
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

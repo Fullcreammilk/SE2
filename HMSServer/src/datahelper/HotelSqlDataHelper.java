@@ -39,7 +39,7 @@ public class HotelSqlDataHelper implements HotelDataHelper{
 	        ArrayList<HotelPO> list=new ArrayList<HotelPO>();
 	        while(rs.next()){
 	        	HotelPO h=new HotelPO(rs.getString("name"),rs.getString("businesscircle"),
-	        			rs.getString("introduce"),rs.getString("adress"),rs.getDouble("stars"));
+	        			rs.getString("introduce"),rs.getString("address"),rs.getDouble("stars"));
 	        	list.add(h);
 	        }
 	        conn.close();
@@ -74,7 +74,7 @@ public class HotelSqlDataHelper implements HotelDataHelper{
 		PreparedStatement pstmt;
 		String sql="update hotel set businesscircle='" + h.getBC() +
 				"', introduce='"+h.getINTRO()+"', address='"+h.getAddress()+
-				"',stars="+h.getStars()+"where id='" + h.getName() + "'";
+				"',stars="+h.getStars()+"where name='" + h.getName() + "'";
 		try {
 	        pstmt = (PreparedStatement) conn.prepareStatement(sql);
 	        i = pstmt.executeUpdate();

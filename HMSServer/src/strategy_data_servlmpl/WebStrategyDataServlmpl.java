@@ -10,7 +10,7 @@ import datahelperinterface.WebStrategyDataHelper;
 import strategy_data_serv.WebStrategyDataServ;
 
 public class WebStrategyDataServlmpl implements WebStrategyDataServ{
-	private ArrayList<WebStrategyPO> list=new ArrayList<WebStrategyPO>();
+	private ArrayList<WebStrategyPO> list;
 	private DataFactory dataFactory;
 	private WebStrategyDataHelper webStrategyDataHelper;
 	private static WebStrategyDataServlmpl webStrategyDataServlmpl;
