@@ -8,7 +8,7 @@ public class ChooseTypeController {
 
 
 	@FXML
-	private Button Normal; //普通会员
+	private Button Normal;  //普通会员
 	
 	@FXML
 	private Button Busi; //企业会员
