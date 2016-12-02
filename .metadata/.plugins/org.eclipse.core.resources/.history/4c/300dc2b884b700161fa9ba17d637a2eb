@@ -1,0 +1,29 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import PO.HotelStrategyPO;
+import strategy_data_serv.HotelStrategyDataServ;
+import strategy_data_servlmpl.HotelStrategyDataServlmpl;
+
+public class HotelStrategyTest {
+	private HotelStrategyDataServ hotelStrategyDataServ;
+	private HotelStrategyPO h1,h2,h3;
+	
+	@Before 
+	public void setup(){
+		hotelStrategyDataServ=HotelStrategyDataServlmpl.getInstance();
+		h1=new HotelStrategyPO("jinling","double11","11/11",0.9,"date");
+		h2=new HotelStrategyPO("jinling","roomnum",null,0.8,"beyond3");
+		h3=new HotelStrategyPO("yinling","double11","11/11",0.7,"date");
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

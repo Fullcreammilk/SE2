@@ -1,0 +1,38 @@
+package strategy_data_servlmpl;
+
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+
+import PO.HotelStrategyPO;
+import strategy_data_serv.HotelStrategyDataServ;
+
+public class HotelStrategyDataServlmpl implements HotelStrategyDataServ{
+	private ArrayList<HotelStrategyPO> list=new ArrayList<HotelStrategyPO>();
+	private DataFactory dataFactory;
+	private HotelStrategyDataHelper hoteStrategyDataHelper;
+	private static HotelStrategyDatalmpl;
+
+	@Override
+	public boolean insertHotelStrategy(HotelStrategyPO strategyPO) throws RemoteException {
+		
+		return false;
+	}
+
+	@Override
+	public ArrayList<HotelStrategyPO> getHotelStrategyList() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteHotelStrategy(String id) throws RemoteException {
+		return false;
+	}
+
+	@Override
+	public boolean modifiedHotelStrategy(HotelStrategyPO strategy) throws RemoteException {
+		return false;
+	}
+
+
+}

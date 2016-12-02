@@ -1,0 +1,28 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import datahelper.CompaniesDataServlmpl;
+import datahelper.Company;
+import datahelperinterface.CompaniesDataServ;
+
+public class ConpanyTest {
+	private CompaniesDataServ companiesDataServ;
+	private Company c1,c2;
+	
+	@Before
+	public void setup(){
+		companiesDataServ=CompaniesDataServlmpl.getInstance();
+		c1=new Company("hotel","nju");
+		c2=new Company("hotel1","nju");
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

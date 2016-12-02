@@ -2,21 +2,19 @@ package room_data_serv;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.RoomPO;
 
 public interface RoomDataServ extends Remote{
 	public RoomPO getRoom(String hotelname,String type) throws RemoteException;
 	
-	public RoomPO[] getRoomList(String hotelname) throws RemoteException;
+	public ArrayList<RoomPO> getRoomList(String hotelname) throws RemoteException;
 	
-	public void insertRoom(RoomPO room) throws RemoteException;
+	public boolean insertRoom(RoomPO room) throws RemoteException;
 	
-	public void deleteRoom(String hotelname,String type) throws RemoteException;
+	public boolean deleteRoom(RoomPO room) throws RemoteException;
 	
-	public void modifiedRoom (RoomPO room) throws RemoteException;
+	public boolean modifiedRoom (RoomPO room) throws RemoteException;
 	
-	public void init() throws RemoteException;
-	
-	public void finish() throws RemoteException;
 }

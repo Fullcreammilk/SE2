@@ -2,18 +2,19 @@ package order_data_serv;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 import PO.OrderPO;
 
 public interface OrderDataServ extends Remote{
 	
-	public void insertOrder (OrderPO po) throws RemoteException;
+	public boolean insertOrder (OrderPO po) throws RemoteException;
 	
-	public void modifiedOrder(OrderPO po) throws RemoteException;
+	public boolean modifiedOrder(OrderPO po) throws RemoteException;
 	
 	public OrderPO getOrder(String OrderID) throws RemoteException;
 	
-	public void init() throws RemoteException;
+	public ArrayList<OrderPO> getOrders(String id) throws RemoteException;
 	
-	public void finish() throws RemoteException;
+	public ArrayList<OrderPO> getAllOrders() throws RemoteException;
 }
