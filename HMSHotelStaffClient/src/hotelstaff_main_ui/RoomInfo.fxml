@@ -18,11 +18,10 @@
                   <Label layoutX="22.0" layoutY="14.0" text="Hotel Name" />
                   <Accordion layoutY="166.0" prefHeight="114.0" prefWidth="107.0" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="166.0">
                     <panes>
-                      <TitledPane alignment="CENTER" animated="false" collapsible="false" text="首页" />
+                      <TitledPane alignment="CENTER" animated="false" collapsible="false" text="订单信息" />
                       <TitledPane alignment="CENTER" animated="false" collapsible="false" text="酒店信息" />
                         <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="10.0" layoutY="33.0" text="客房情况" />
-                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="10.0" layoutY="56.0" text="销售策略" />
-                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="10.0" layoutY="79.0" text="订单信息" />
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="10.0" layoutY="56.0" text="促销策略" />
                     </panes>
                   </Accordion>
                </children>
