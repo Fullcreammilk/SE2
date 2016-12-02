@@ -12,7 +12,7 @@ public class RemoteHelper {
 		return remoteHelper;
 	}
 
-	public RemoteHelper() {}
+	private RemoteHelper() {}
 	
 	public void setRemote(Remote remote) {
 		this.remote = remote;
@@ -26,8 +26,8 @@ public class RemoteHelper {
 		return (CommentDataServ) remote;
 	}
 	
-	public HotalDataServ getHotelDataServ() {
-		return (HotalDataServ) remote;
+	public HotelDataServ getHotelDataServ() {
+		return (HotelDataServ) remote;
 	}
 	
 	public OrderDataServ getOrderDataServ() {

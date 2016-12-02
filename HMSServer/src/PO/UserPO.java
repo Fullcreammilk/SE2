@@ -1,9 +1,14 @@
 package PO;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class UserPO {
+public class UserPO implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3996305783368778968L;
 	private String id,name,contactInof,specialInfo;
 	private int creditTol,vipLev,isLogin;
 	private String password;

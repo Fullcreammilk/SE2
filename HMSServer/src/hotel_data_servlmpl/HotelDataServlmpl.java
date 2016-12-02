@@ -3,20 +3,20 @@ package hotel_data_servlmpl;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
+import DataService.CommentDataServ;
+import DataService.HotelDataServ;
+import DataService.HotelStrategyDataServ;
+import DataService.RoomDataServ;
 import PO.CommentPO;
 import PO.HotelPO;
 import comment_data_servlmpl.CommentDataServlmpl;
-import commet_data_serv.CommentDataServ;
 import datahelper.CompaniesDataServlmpl;
 import datahelper.Company;
 import datahelper.DataFactorylmpl;
 import datahelperinterface.CompaniesDataServ;
 import datahelperinterface.DataFactory;
 import datahelperinterface.HotelDataHelper;
-import hotel_data_serv.HotelDataServ;
-import room_data_serv.RoomDataServ;
 import room_data_servlmpl.RoomDataServlmpl;
-import strategy_data_serv.HotelStrategyDataServ;
 import strategy_data_servlmpl.HotelStrategyDataServlmpl;
 
 public class HotelDataServlmpl implements HotelDataServ{

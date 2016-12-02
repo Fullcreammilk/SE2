@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="HMSDate.HotalDataServ"/>
-<fullyQualifiedTypeName name="HMSDate.OrderDataServ"/>
-<fullyQualifiedTypeName name="HMSDate.normalOrderDataServ"/>
-<fullyQualifiedTypeName name="HMSDate.abnormalOrderDataServ"/>
-<fullyQualifiedTypeName name="HMSDate.revokOrderDataServ"/>
-<fullyQualifiedTypeName name="HMSDate.RoomDataServ"/>
-<fullyQualifiedTypeName name="HMSDate.hotelStrategyDataImpl"/>
-<fullyQualifiedTypeName name="HMSDate.memberStrategyDataImpl"/>
-<fullyQualifiedTypeName name="HMSDate.UserDataServ"/>
-<fullyQualifiedTypeName name="Datarmi.RemoteHelper"/>
-<fullyQualifiedTypeName name="HMSBl.LoginBlServlmpl"/>
-<fullyQualifiedTypeName name="HMSBl.HotelBlServlmpl"/>
-<fullyQualifiedTypeName name="HMSBl.CreditBlServlmpl"/>
 <fullyQualifiedTypeName name="PO.WebStrategyPO"/>
 <fullyQualifiedTypeName name="strategy_data_serv.WebStrategyDataServ"/>
-<fullyQualifiedTypeName name="DataService.HotelStrategyDataServ"/>
-<fullyQualifiedTypeName name="DataService.WebStrategyDataServ"/>
 <fullyQualifiedTypeName name="datahelperinterface.CreditDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.CommentDataHelper"/>
 <fullyQualifiedTypeName name="datahelperinterface.WebStrategyDataHelper"/>
@@ -59,5 +44,20 @@
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="user_data_servlmpl.UserDataServlmpl"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.net.MalformedURLException"/>
+<fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+<fullyQualifiedTypeName name="java.rmi.NotBoundException"/>
+<fullyQualifiedTypeName name="login_ui.MainApp"/>
+<fullyQualifiedTypeName name="login_bl_servlmpl.LoginBlServImpl"/>
+<fullyQualifiedTypeName name="login_bl_serv.LoginBlServ"/>
+<fullyQualifiedTypeName name="DataService.WebStrategyDataServ"/>
+<fullyQualifiedTypeName name="DataService.CommentDataServ"/>
+<fullyQualifiedTypeName name="DataService.HotelStrategyDataServ"/>
+<fullyQualifiedTypeName name="DataService.HotelDataServ"/>
+<fullyQualifiedTypeName name="DataService.OrderDataServ"/>
+<fullyQualifiedTypeName name="DataService.RoomDataServ"/>
+<fullyQualifiedTypeName name="DataService.UserDataServ"/>
+<fullyQualifiedTypeName name="DataService.CreditDataServ"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
 </qualifiedTypeNameHistroy>

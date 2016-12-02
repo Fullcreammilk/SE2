@@ -1,5 +1,0 @@
-package commet_data_serv;
-
-public interface CommentDataServ {
-
-}

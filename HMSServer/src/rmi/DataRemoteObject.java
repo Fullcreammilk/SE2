@@ -4,6 +4,14 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
+import DataService.CommentDataServ;
+import DataService.CreditDataServ;
+import DataService.HotelDataServ;
+import DataService.HotelStrategyDataServ;
+import DataService.OrderDataServ;
+import DataService.RoomDataServ;
+import DataService.UserDataServ;
+import DataService.WebStrategyDataServ;
 import PO.CommentPO;
 import PO.CreditPO;
 import PO.HotelPO;
@@ -13,29 +21,22 @@ import PO.RoomPO;
 import PO.UserPO;
 import PO.WebStrategyPO;
 import comment_data_servlmpl.CommentDataServlmpl;
-import commet_data_serv.CommentDataServ;
-import credit_data_serv.CreditDataServ;
 import credit_data_servlmpl.CreditDataServlmpl;
-import hotel_data_serv.HotelDataServ;
 import hotel_data_servlmpl.HotelDataServlmpl;
-import order_data_serv.OrderDataServ;
 import order_data_servlmpl.OrderDataServlmpl;
-import room_data_serv.RoomDataServ;
 import room_data_servlmpl.RoomDataServlmpl;
-import strategy_data_serv.HotelStrategyDataServ;
-import strategy_data_serv.WebStrategyDataServ;
 import strategy_data_servlmpl.HotelStrategyDataServlmpl;
 import strategy_data_servlmpl.WebStrategyDataServlmpl;
-import user_data_serv.UserDataServ;
 import user_data_servlmpl.UserDataServlmpl;
 
 public class DataRemoteObject extends UnicastRemoteObject implements
 	CreditDataServ,HotelDataServ,OrderDataServ,RoomDataServ,HotelStrategyDataServ,WebStrategyDataServ,UserDataServ,CommentDataServ{
 
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2249679312872830667L;
 	private CreditDataServ creditDataServ;
 	private HotelDataServ hotelDataServ;
 	private OrderDataServ orderDataServ;

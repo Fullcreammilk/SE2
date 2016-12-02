@@ -85,7 +85,7 @@ public class HotelBlServImpl implements HotelBlServ {
     }
 
     /**
-     * 已经写好了
+     * 宸茬粡鍐欏ソ浜�
      * @param hotelPO
      * @return
      */
@@ -105,7 +105,7 @@ public class HotelBlServImpl implements HotelBlServ {
     }
 
     /**
-     * 没写完，需要更多接口
+     * 娌″啓瀹岋紝闇�瑕佹洿澶氭帴鍙�
      *
      * @param hotelStrategyPO
      * @return
@@ -121,16 +121,16 @@ public class HotelBlServImpl implements HotelBlServ {
             case "double_eleven":
 //                strategyVO = new DoubleElevenStrategy();
             case "room_number":
-                strategyVO = new RoomNumberStrategy();
+//                strategyVO = new RoomNumberStrategy();
             case "cooperative":
-                strategyVO = new CooperativeStrategy();
+//                strategyVO = new CooperativeStrategy();
         }
         return null;
     }
 
     /**
-     * 写好了，把字符串型的评论转化成CommentVO
-     * 将来希望可以改成带有用户名的
+     * 鍐欏ソ浜嗭紝鎶婂瓧绗︿覆鍨嬬殑璇勮杞寲鎴怌ommentVO
+     * 灏嗘潵甯屾湜鍙互鏀规垚甯︽湁鐢ㄦ埛鍚嶇殑
      *
      * @param comment
      * @return
@@ -145,10 +145,10 @@ public class HotelBlServImpl implements HotelBlServ {
     }
 
     /**
-     * 写好了，用来把PO变成VO
-     * 反正是私有方法随便打打注释应该不会死吧
+     * 鍐欏ソ浜嗭紝鐢ㄦ潵鎶奝O鍙樻垚VO
+     * 鍙嶆鏄鏈夋柟娉曢殢渚挎墦鎵撴敞閲婂簲璇ヤ笉浼氭鍚�
      *
-     * @param rooms 要变的PO
+     * @param rooms 瑕佸彉鐨凱O
      * @return
      */
     private ArrayList<RoomVO> changeRoomToVO(ArrayList<RoomPO> rooms) {
@@ -165,9 +165,9 @@ public class HotelBlServImpl implements HotelBlServ {
     }
 
     /**
-     * 写好了，用来吧PO变成VO
+     * 鍐欏ソ浜嗭紝鐢ㄦ潵鍚O鍙樻垚VO
      *
-     * @param strategys 需要变的策略类的PO
+     * @param strategys 闇�瑕佸彉鐨勭瓥鐣ョ被鐨凱O
      * @return
      */
     private ArrayList<StrategyVO> changeStrategyToVO(ArrayList<HotelStrategyPO> strategys) {
