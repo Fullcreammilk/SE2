@@ -1,19 +1,15 @@
 package login_ui;
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class LoginController {
 
+	
 	@FXML
 	private Button Confirm;
 	
@@ -59,27 +55,11 @@ public class LoginController {
     		 System.out.println("lol"); 
     	 }
     	 else{
-    		 try{
-    				
-    			// Load the fxml file and create a new stage for the choosetype dialog.
-    			FXMLLoader loader = new FXMLLoader();
-   				loader.setLocation(MainApp.class.getResource("AlertDialog_css.fxml"));
-   				GridPane page = (GridPane) loader.load();
-    				
-   				errorStage.setTitle("Message");
-   				Scene scene = new Scene(page);
-    			errorStage.setScene(scene);
-    			errorStage.show();
-    			okButton.setOnAction(new EventHandler<ActionEvent>(){
-    		        @Override
-    		        public void handle(ActionEvent event) {
-    		        	errorStage.close();
-    		        }
-    		    });
-    			
-    		}catch(IOException e){
-    			e.printStackTrace();
-    		}	    		 
+    		 Alert alert = new Alert(AlertType.INFORMATION);
+    		 alert.setTitle("Message");
+    		 alert.setHeaderText(null);
+    		 alert.setContentText("用户名或密码错误，请重新输入");
+    		 alert.showAndWait();
     	 }
      }
      
