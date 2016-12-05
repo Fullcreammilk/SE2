@@ -1,0 +1,8 @@
+package snippet;
+
+public class Snippet {
+	Description	Resource	Path	Location	Type
+	The project cannot be built until build path errors are resolved	HMS		Unknown	Java Problem
+	
+}
+

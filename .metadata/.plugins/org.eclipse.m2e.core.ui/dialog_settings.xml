@@ -2,10 +2,13 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="se2"/>
 		</list>
 		<list key="name">
+			<item value="hms"/>
 		</list>
 		<list key="artifactId">
+			<item value="HMS"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -80,6 +83,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\eclipse\neon\MAVENSE2"/>
 			<item value="D:\eclipse\neon\MavenSE2"/>
 			<item value="D:\eclipse\neon\Maven"/>
 		</list>
