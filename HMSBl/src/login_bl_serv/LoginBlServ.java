@@ -10,7 +10,9 @@ public interface LoginBlServ {
 	public static LoginBlServ getInstance() {
 		return new LoginBlServImpl();
 	}
-
+/**
+ * test...
+ * /
 	/**
 	 * 登录方法，如果没有这个用户，返回WRONG_ID
 	 * 如果密码不正确，返回WRONG_PASSWORD
