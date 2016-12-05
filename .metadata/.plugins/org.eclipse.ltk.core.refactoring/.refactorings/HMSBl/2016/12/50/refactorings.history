@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;login_ui&apos; to &apos;HMSUserClient/src&apos;&#x0D;&#x0A;- Original project: &apos;HMSBl&apos;&#x0D;&#x0A;- Destination element: &apos;HMSUserClient/src&apos;&#x0D;&#x0A;- Original element: &apos;HMSBl/src/login_ui&apos;" description="Copy package" destination="=HMSUserClient/src" element1="/src&lt;login_ui" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1480920393437" version="1.0"/>
+</session>
